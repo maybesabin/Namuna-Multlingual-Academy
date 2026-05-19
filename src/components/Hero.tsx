@@ -1,8 +1,16 @@
 import React from "react";
-import Image from "next/image";
-import image from "../../public/hero-image.jpg";
+import Image, { StaticImageData } from "next/image";
 
-export default function contact({ text }: { text: string }) {
+type ContactProps = {
+    title: string;
+    description: string;
+    image: StaticImageData;
+}
+
+export default function contact({
+    title,
+    description,
+    image }: ContactProps) {
     return (
         <div className="relative text-white w-full">
             <Image
@@ -11,9 +19,9 @@ export default function contact({ text }: { text: string }) {
                 alt="Namuna Multilingual Academy"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white px-4 text-center">
-                <h2 className="sm:text-4xl text-2xl font-bold mb-4">Get In Touch</h2>
+                <h2 className="sm:text-4xl text-2xl font-bold mb-4">{title}</h2>
                 <p className="md:text-sm text-xs lg:max-w-xl">
-                    {text}
+                    {description}
                 </p>
             </div>
         </div>

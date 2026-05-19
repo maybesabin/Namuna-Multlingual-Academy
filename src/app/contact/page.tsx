@@ -2,12 +2,15 @@ import React from "react";
 import Hero from "../../components/Hero"
 import Form from "../../containers/Contact/Form";
 import GetInTouch from "../../containers/Contact/GetInTouch";
+import image from "../../../public/hero-image.jpg";
 
 export default function Page() {
   return (
     <>
       <Hero
-        text=" We're here to answer your questions and help you learn more about Us. Reach out to us anytime!"
+        image={image}
+        title="Get In Touch"
+        description=" We're here to answer your questions and help you learn more about Us. Reach out to us anytime!"
       />
       <div className="w-full flex items-center justify-center mt-12">
         <div className="xl:w-[85rem] w-full md:px-6 px-3 flex flex-col items-center gap-6">

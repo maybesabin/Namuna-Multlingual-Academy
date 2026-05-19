@@ -31,18 +31,20 @@ const Navbar = () => {
             <div className="flex items-center justify-between md:px-6 px-3 xl:w-[85rem] w-full my-4">
 
                 <div className="flex items-center gap-2">
-                    <Image
-                        width={600}
-                        height={600}
-                        className="md:h-14 md:w-14 h-10 w-10 object-cover rounded-md border border-neutral-200"
-                        src={logo}
-                        alt="Namuna Multilingual Academy logo"
-                    />
+                    <Link href={'/'}>
+                        <Image
+                            width={600}
+                            height={600}
+                            className="md:h-14 md:w-14 h-10 w-10 object-cover rounded-md border border-neutral-200"
+                            src={logo}
+                            alt="Namuna Multilingual Academy logo"
+                        />
+                    </Link>
                     <div className="flex flex-col items-start">
-                        <h5 className="font-semibold text-blue-600 md:text-xl text-base">Namuna</h5>
-                        <h4 className="md:text-sm text-xs -mt-1 text-neutral-600">
+                        <Link href={'/'} className="font-semibold text-blue-600 md:text-xl text-base">Namuna</Link>
+                        <Link href={'/'} className="md:text-sm text-xs -mt-1 text-neutral-600">
                             Multilingual Academy
-                        </h4>
+                        </Link>
                     </div>
                 </div>
 

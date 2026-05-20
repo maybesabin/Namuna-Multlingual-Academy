@@ -1,8 +1,8 @@
 import React from "react";
 import Hero from "../../components/Hero"
-import Form from "../../containers/Contact/Form";
-import GetInTouch from "../../containers/Contact/GetInTouch";
 import image from "../../../public/hero-image.jpg";
+import Form from "@/containers/contact/Form";
+import GetInTouch from "@/containers/contact/GetInTouch";
 
 export default function Page() {
   return (

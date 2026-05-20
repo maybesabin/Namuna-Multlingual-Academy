@@ -1,8 +1,8 @@
 import React from "react";
 import Hero from "../../components/Hero"
 import image from "../../../public/hero-image.jpg";
-import Form from "@/containers/contact/Form";
 import GetInTouch from "@/containers/contact/GetInTouch";
+import FormContainer from "@/containers/contact/Form";
 
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
       <div className="w-full flex items-center justify-center mt-12">
         <div className="xl:w-[85rem] w-full md:px-6 px-3 flex flex-col items-center gap-6">
           <div className="flex lg:flex-row flex-col items-start gap-6">
-            <Form />
+            <FormContainer />
             <GetInTouch />
           </div>
 

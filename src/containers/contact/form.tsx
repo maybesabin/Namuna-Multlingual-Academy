@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm"
 import { Send } from "lucide-react"
 
-const Form = () => {
+const FormContainer = () => {
     return (
         <div className="lg:w-3/5 w-full border border-neutral-200/50 rounded-lg lg:p-6 p-3">
             <h3 className="flex items-center gap-2">
@@ -18,4 +18,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default FormContainer

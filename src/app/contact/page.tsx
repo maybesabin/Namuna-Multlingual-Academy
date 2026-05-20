@@ -1,8 +1,6 @@
 import React from "react";
 import Hero from "../../components/Hero"
 import image from "../../../public/hero-image.jpg";
-import GetInTouch from "@/containers/contact/GetInTouch";
-import FormContainer from "@/containers/contact/Form";
 
 export default function Page() {
   return (
@@ -14,10 +12,6 @@ export default function Page() {
       />
       <div className="w-full flex items-center justify-center mt-12">
         <div className="xl:w-[85rem] w-full md:px-6 px-3 flex flex-col items-center gap-6">
-          <div className="flex lg:flex-row flex-col items-start gap-6">
-            <FormContainer />
-            <GetInTouch />
-          </div>
 
           {/* Map */}
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d901387.4223294647!2d81.76062546510204!3d28.053662226540087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39943d1035fcc47b%3A0x8e11a9b5adb38a9f!2sN.C%20Namuna%20English%20School!5e0!3m2!1sen!2snp!4v1746857025416!5m2!1sen!2snp" className="border-0 w-full h-64" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>

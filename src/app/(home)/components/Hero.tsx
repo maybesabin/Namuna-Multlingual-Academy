@@ -12,7 +12,7 @@ export default function contact({
     description,
     image }: ContactProps) {
     return (
-        <div className="relative text-white w-full">
+        <div className="relative text-white w-full mb-12">
             <Image
                 className="w-full h-[30svh] object-cover brightness-40"
                 src={image}

@@ -1,10 +1,10 @@
 "use client"
 
-import principal from "../../public/principal.jpg"
-import logo from "../../public/logo.jpeg"
+import principal from "../../../../public/principal.jpg"
+import logo from "../../../../public/logo.jpeg"
 import { CheckCircle, Users } from "lucide-react"
 import Image from "next/image"
-import placeholder from "../../public/placeholder.png"
+import placeholder from "../../../../public/placeholder.png"
 
 const AboutUs = () => {
     const facilities = [

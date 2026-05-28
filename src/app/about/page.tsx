@@ -1,12 +1,39 @@
 import Hero from "../../components/Hero";
-import React from "react";
 import image from "../../../public/about-image.jpg";
 import heroImage from "../../../public/hero-image.jpg";
 import placeholder from "../../../public/placeholder.png";
 import principal from "../../../public/principal.jpg";
 import Image from "next/image";
+import PersonCard from "./components/PersonCard";
 
 export default function page() {
+  const teamMembers = [
+    {
+      name: "Aarav Shrestha",
+      position: "Principal",
+      imageUrl: "https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+    },
+    {
+      name: "Sanjana Koirala",
+      position: "Academic Coordinator",
+      imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6"
+    },
+    {
+      name: "Ramesh Adhikari",
+      position: "Shareholder",
+      imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a"
+    },
+    {
+      name: "Priya Gurung",
+      position: "Administrative Officer",
+      imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956"
+    },
+    {
+      name: "Bikash Thapa",
+      position: "IT Coordinator",
+      imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956"
+    }
+  ];
   return (
     <>
       <Hero
@@ -16,8 +43,9 @@ export default function page() {
       />
 
       <div className="w-full flex items-center justify-center lg:mt-36 mt-12">
-        <div className="xl:w-[85rem] w-full md:px-6 px-3 flex flex-col items-center lg:gap-36 gap-12">
+        <div className="xl:w-340 w-full md:px-6 px-3 flex flex-col items-center lg:gap-36 gap-12">
 
+          {/* About Namuna */}
           <div className="flex items-start lg:flex-row flex-col gap-12 w-full">
             <div className="lg:w-1/2 w-full">
               <h2 className="xl:text-5xl md:text-4xl text-3xl font-bold text-blue-600">
@@ -30,15 +58,16 @@ export default function page() {
               </p>
             </div>
             <Image
-              className="lg:w-1/2 w-full h-[28rem] object-cover rounded-xl"
+              className="lg:w-1/2 w-full h-112 object-cover rounded-xl"
               src={heroImage}
               alt={placeholder.src}
             />
           </div>
 
+          {/* Our Mission  */}
           <div className="flex items-start lg:flex-row flex-col-reverse gap-12 w-full">
             <Image
-              className="lg:w-1/2 w-full h-[28rem] object-cover rounded-xl"
+              className="lg:w-1/2 w-full h-112 object-cover rounded-xl"
               src={principal}
               alt={placeholder.src}
             />
@@ -52,6 +81,23 @@ export default function page() {
                 Through innovative teaching methods and a student-centered approach, we strive to nurture individuals who are not only academically capable but also adaptable, creative, and ready to succeed in an ever-evolving world.
               </p>
             </div>
+          </div>
+
+          {/* Our Team  */}
+          <h2 className="xl:text-5xl md:text-4xl text-3xl font-bold text-blue-600">
+            Our Team
+            <span className="block h-1 bg-blue-600 w-[40%] ml-auto"></span>
+          </h2>
+
+          <div className="flex flex-wrap justify-center gap-12 w-full lg:-mt-12">
+            {teamMembers.map((member, index) => (
+              <PersonCard
+                key={index}
+                name={member.name}
+                position={member.position}
+                imageUrl={member.imageUrl}
+              />
+            ))}
           </div>
         </div>
       </div >
